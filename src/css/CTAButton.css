@@ -1,0 +1,46 @@
+.CTA-button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .CTA-button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.152);
+  --animation-color:var(--btn-color);
+  --fs-size: calc(clamp(0.938rem, 1.119vw + 0.22rem, 1.563rem));
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--fs-size);
+  font-family: "Urbanist", sans-serif;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  .CTA-button .hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+  animation-name: mymove;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  }
+  /* hover */
+  .CTA-button:hover .hover-text {
+  animation: none;
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  

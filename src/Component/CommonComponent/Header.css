@@ -1,0 +1,47 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    width: 100%;
+}
+.navbar-inner {
+    display: flex;
+    padding: 0 calc(clamp(2.813rem, 2.237vw + 1.378rem, 4.063rem));
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-inner .logo {
+    width: 10%;
+}
+.navbar-inner a {
+    font-size: calc(clamp(1.875rem, 1.119vw + 1.158rem, 2.5rem));
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------Media Query ---------------------------------------------------------------------- */
+@media (max-width: 1400px){}
+@media (max-width: 1280px){}
+@media (max-width: 1199px){
+    .navbar-inner .logo {
+        width: 13%;
+    }
+
+}
+@media (max-width: 991px){
+
+}
+@media (max-width: 767px){
+
+}
+@media (max-width: 667px){}
+@media (max-width: 480px){}
+@media (max-width: 360px){}

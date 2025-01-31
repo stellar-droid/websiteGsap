@@ -1,0 +1,683 @@
+.Paas-banner {
+    position: relative;
+    width: 100%;
+}
+
+
+:root {
+    --sectionn-top-bottom-padding : calc(clamp(5rem, 2.237vw + 3.565rem, 6.25rem));
+    --section-right-left-padding : calc(clamp(3.75rem, 1.119vw + 3.033rem, 4.375rem));
+
+}
+.section-container {
+    padding: var(--sectionn-top-bottom-padding) var(--section-right-left-padding);
+}
+
+.banner_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 85%;
+    height: 100%;
+}
+.Saas_banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59%;
+    z-index: 0;
+    height: 100%;
+    background: linear-gradient(83deg, rgba(0, 0, 0, 1) 30%, rgba(0, 148, 255, 0) 87%);
+}
+.Saas_banner_head{
+    font-size:  clamp(1.875rem, 3.356vw - .277rem, 3.75rem);;
+    font-weight: 500;
+    color: #fff;
+    width: 52%;
+}
+.Saas_banner {
+    position: relative;
+    width: 100%;
+}
+.Saas_banner .saas_container {
+    position: relative;
+    padding:  15vw 7vw 19vw 7vw;
+}
+.Saas_banner .saas_container .Saas_underline {
+    position: relative;
+   
+}
+.saasPageCss  {
+    position: relative;
+    margin-bottom: 4vw;
+}
+.saasPageCss::before {
+    content: "";
+    position: absolute;
+    width: 0.3%;
+    height: 100%;
+    border-radius: 50px;
+    top: 0;
+    background: #fff;
+    left: -2%;
+    box-shadow: 0px 1px 34px 30px rgb(4 76 197);
+    -webkit-box-shadow: 0px 1px 15px 9px rgb(4 76 197);
+    -moz-box-shadow: 0px 1px 34px 30px rgb(4 76 197);
+}
+.underline_overflow {
+    position: absolute;
+    left: 30%;
+    bottom: -20%;
+    width: auto;
+}
+.underline_overflow svg {
+    width: calc(clamp(8.75rem, 9.06vw + 2.94rem, 13.813rem));
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+.indian_saas {
+    width: 100%;
+    position: relative;
+    background-color: #000;
+}
+.indian_saas .saas_second_container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.indian_saas .saas_second_container .heading_link {
+    width: 100%;
+}
+.indian_saas .saas_second_container .heading_link h3 {
+    font-size: calc(clamp(1.875rem, 3.356vw - 0.277rem, 3.75rem));;
+    text-align: left;
+    line-height: calc(clamp(2.813rem, 3.906vw + 0.313rem, 5rem));
+    padding-right: 2vw;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 3vw;
+}
+.indian_saas .saas_second_container .heading_link p {
+    font-size: calc(clamp(0.938rem, 1.678vw - 0.138rem, 1.875rem));
+    color: #ffffffa1;
+    padding-right: 5vw;
+    margin-bottom: 3vw;
+}
+.indian_saas .saas_second_container .heading_link p:nth-child(2) {
+    margin-bottom: 1vw;
+}
+.indian_saas .booming_market {
+    position: relative;
+}
+.indian_saas .booming_market .outline_box1{
+    position: relative;
+    z-index: 2;
+    background-color: #000;
+    border: 1px solid #233256;
+    width: 55%;
+    padding: 1vw;
+    border-radius: 20px;
+}
+.indian_saas .booming_market .outline_box1 .booming_box {
+    padding: 1vw 2vw;
+    font-size: calc(clamp(0.875rem, 1.566vw - 0.129rem, 1.75rem));
+    border-radius: 20px;
+    font-weight: 300;
+    color: #fff;
+    background-image: linear-gradient(93deg, rgba(0,230,255,1) 0%, rgba(0,102,255,1) 100%); ;
+}
+.indian_saas .booming_market .outline_box1 .booming_box span {
+    font-size: calc(clamp(1.125rem, 1.902vw - 0.094rem, 2.188rem));
+    font-weight: 700;
+}
+.indian_saas .booming_market .outline_box2{
+    position: relative;
+    z-index: 2;
+    margin-top: 4vw;
+    background-color: #000;
+    border: 1px solid #233256;
+    width: 76%;
+    padding: 1vw;
+    border-radius: 20px;
+    margin-left: auto;
+}
+.indian_saas .booming_market .outline_box2 .buisness_box {
+    padding: 1vw 2vw;
+    font-size: calc(clamp(0.875rem, 1.566vw - 0.129rem, 1.75rem));;
+    border-radius: 20px;
+    font-weight: 300;
+    color: #fff;
+    background-image: linear-gradient(93deg, rgba(0,230,255,1) 0%, rgba(0,102,255,1) 100%); ;
+}
+.indian_saas .booming_market .outline_box2 .buisness_box span {
+    font-size:  calc(clamp(1.125rem, 1.902vw - 0.094rem, 2.188rem));;
+    font-weight: 700;
+}
+.indian_saas .booming_market .empty_outline {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    border-radius: 20px;
+    height: 62%;
+    border: 1px solid #233256;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+.product-slider {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+}
+.product-slider .heading {
+    position: relative;
+}
+.product-slider .heading img {
+    position: absolute;
+    bottom: -48%;
+    right: -5%;
+}
+.product-slider .heading h4{
+    font-size: calc(clamp(0.938rem, 1.678vw - 0.138rem, 1.875rem));
+    text-align: center;
+    color: #fff;
+    padding: 0 25vw;
+    margin-bottom: 3vw;
+}
+.product-slider .heading h3 {
+    font-size: calc(clamp(2.5rem, 2.237vw + 1.065rem, 3.75rem));
+    margin-bottom: 3vw;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+.product-slider .heading h3 span {
+    position: relative;
+}
+.product-slider .product-container .prod-slides .slide-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-slider .product-container .prod-slides .slide-container .famrut-img {
+    width: 100%;
+}
+.product-slider .product-container .prod-slides .slide-container .famrut-description h3 {
+    font-size: calc(clamp(1.875rem, 2.796vw + 0.082rem, 3.438rem));
+    font-weight: 500;
+    margin-bottom: 2vw;
+    text-align: right;
+    line-height: calc(clamp(2.5rem, 3.356vw + 0.348rem, 4.375rem));
+    padding-left: 2vw;
+    background-image: linear-gradient(93deg, rgba(243,247,29,1) 0%, rgba(82,202,0,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.product-slider .product-container .prod-slides .slide-container .famrut-description h5 {
+    font-size: calc(clamp(0.938rem, 1.678vw - 0.138rem, 1.875rem));
+    text-align: right;
+    font-weight: 600;
+    color: #fff;
+   margin-bottom: 1vw;
+   
+}
+.product-slider .product-container .prod-slides .slide-container .famrut-description p {
+    font-size: calc(clamp(0.688rem, 1.23vw - 0.102rem, 1.375rem));
+    text-align: right;
+    font-weight: 300;
+    color: #fff;
+    width: 85%;
+    margin-bottom: 2vw;
+    /* padding-left: 4vw; */
+    margin-left: auto;
+}
+.product-slider .product-container .prod-slides .slide-container .famrut-description .CTA-btn {
+text-align: right;}
+
+.product-slider .product-container .prod-slides .slide-container .LCM-img {
+    width: 60%;
+}
+.product-slider .product-container .prod-slides .slide-container .LCM-description {
+    width: 90%;
+    padding-right: 17vw;
+}
+.product-slider .product-container .prod-slides .slide-container .LCM-description h3 {
+    font-size: calc(clamp(1.875rem, 2.796vw + 0.082rem, 3.438rem));
+    font-weight: 500;
+    margin-bottom: 2vw;
+    text-align: left;
+    line-height: calc(clamp(2.5rem, 3.356vw + 0.348rem, 4.375rem));
+    background-image: linear-gradient(93deg, rgba(128,43,236,1) 0%, rgba(247,102,224,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+   
+}
+.product-slider .product-container .prod-slides .slide-container .LCM-description h5 {
+    font-size: calc(clamp(0.938rem, 1.678vw - 0.138rem, 1.875rem));
+    text-align: left;
+    font-weight: 600;
+    color: #fff;
+   margin-bottom: 1vw;
+   
+}
+.product-slider .product-container .prod-slides .slide-container .LCM-description p {
+    font-size: calc(clamp(0.688rem, 1.23vw - 0.102rem, 1.375rem));
+    text-align: left;
+    font-weight: 300;
+    width: 85%;
+    color: #fff;
+    margin-bottom: 2vw;
+    /* padding-left: 4vw; */
+    margin-right: auto;
+}
+.product-slider .product-container .prod-slides .slide-container .LCM-description .CTA-btn {
+text-align: left;}
+
+
+.product-slider .product-container .prod-slides .slide-container .IPAS-img {
+    width: 60%;
+}
+.product-slider .product-container .prod-slides .slide-container .IPAS-description {
+    width: 90%;
+  
+}
+.product-slider .product-container .prod-slides .slide-container .IPAS-description h3 {
+    font-size: calc(clamp(1.875rem, 2.796vw + 0.082rem, 3.438rem));;
+    font-weight: 500;
+    margin-bottom: 2vw;
+    text-align: right;
+    line-height: calc(clamp(2.5rem, 3.356vw + 0.348rem, 4.375rem));
+    padding-right: 2vw;
+    background-image:linear-gradient(93deg, rgba(0,125,216,1) 0%, rgba(0,209,255,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.product-slider .product-container .prod-slides .slide-container .IPAS-description h5 {
+    font-size:  calc(clamp(0.938rem, 1.678vw - 0.138rem, 1.875rem));
+    text-align: right;
+    font-weight: 600;
+    color: #fff;
+   margin-bottom: 1vw;
+   
+}
+.product-slider .product-container .prod-slides .slide-container .IPAS-description p {
+    font-size: calc(clamp(0.688rem, 1.23vw - 0.102rem, 1.375rem));
+    text-align: right;
+    font-weight: 300;
+    width: 85%;
+    color: #fff;
+    margin-bottom: 2vw;
+    /* padding-left: 4vw; */
+    margin-left: auto;
+}
+.product-slider .product-container .prod-slides .slide-container .IPAS-description .CTA-btn {
+text-align: right;}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.Infra-product {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+}
+.Infra-product .infra-container h3 {
+    font-size: calc(clamp(2.5rem, 2.237vw + 1.065rem, 3.75rem));
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+.Infra-product .infra-container .center-img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom:  2.5vw;
+}
+.Infra-product .infra-container .center-img div {
+    width: 16%;
+}
+.Infra-product .infra-container .card-container {
+    display: flex;
+    justify-content: space-between;
+}
+.Infra-product .infra-container .card-container .card {
+    position: relative;
+    background: url('../../assets/images/Saas/card-bg.png');
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw 4vw;
+    align-items: center;
+}
+.Infra-product .infra-container .card-container .card:first-child img {
+    position: absolute;
+    top: -14%;
+    right: -42%;
+}
+.Infra-product .infra-container .card-container .card:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: -11%;
+    left: 50%;
+    width: 2px;
+    height: 15%;
+    background: linear-gradient(275deg, rgba(0, 194, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+.Infra-product .infra-container .card-container .card:last-child img {
+    position: absolute;
+    transform: rotateY(180deg);
+    top: -14%;
+    right: 48%;
+}
+.Infra-product .infra-container .card-container .card:first-child h4::before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    right: -10%;
+    width: 0.8vw;
+    height: 0.8vw;
+    border: 4px solid #fff;
+    border-radius: 50%;
+
+}
+.Infra-product .infra-container .card-container .card h4 {
+    position: relative;
+    font-size: calc(clamp(1.25rem, 2.237vw - 0.185rem, 2.5rem));
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1.5vw;
+}
+
+.Infra-product .infra-container .card-container .card h5 {
+    font-size: calc(clamp(0.813rem, 1.454vw - 0.12rem, 1.625rem));
+    font-weight: 400;
+    margin-bottom: 1.5vw;
+    color: #00C1FF;
+}
+
+.Infra-product .infra-container .card-container .card p {
+    padding:  0 2.3vw;
+    text-align: center;
+    color: #fff;
+    font-size: calc(clamp(0.625rem, 1.119vw - 0.092rem, 1.25rem));
+    font-weight: 300;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+.saas-transformation {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+}
+.saas-transformation .transformation-container .heading {
+    position: relative;
+}
+.saas-transformation .transformation-container .heading h2{
+    font-size: calc(clamp(2.5rem, 2.237vw + 1.065rem, 3.75rem));
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding: 0 15vw;
+    line-height: calc(clamp(3.438rem, 2.237vw + 2.003rem, 4.688rem));
+    margin-bottom: 4vw;
+}
+.saas-transformation .transformation-container .heading h2 span {
+    position: relative;
+}
+.saas-transformation .transformation-container .heading img {
+    position: absolute;
+    bottom: -41%;
+    right: 10%;
+}
+.saas-transformation .transformation-container .transformations-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.saas-transformation .transformation-container .transformations-split .transf-text{
+    padding-left: 5vw;
+}
+.saas-transformation .transformation-container .transformations-split .transf-text div {
+    padding-bottom: 2.5vw;
+}
+.saas-transformation .transformation-container .transformations-split .transf-text div h4 {
+    font-size: calc(clamp(1.375rem, 2.013vw + 0.084rem, 2.5rem));
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.1vw;
+}
+.saas-transformation .transformation-container .transformations-split .transf-text div p {
+    font-size: calc(clamp(0.688rem, 1.23vw - 0.102rem, 1.375rem));
+    font-weight: 300;
+    color: #fff;
+    padding-right: 3vw;
+    line-height: 1.8vw;
+
+}
+.saas-transformation .transformation-container .transformations-split .img-div {
+    position: relative;
+}
+.saas-transformation .transformation-container .transformations-split .img-div img {
+    position: relative;
+    z-index: 2;
+}
+.saas-transformation .transformation-container .transformations-split .img-div::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: -5%;
+    z-index: 0;
+    filter: blur(90px);
+    right: 10%;
+    background:  linear-gradient(93deg, rgba(0,230,255,1) 0%, rgba(0,102,255,1) 100%);;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.revolution-impact {
+    position: relative;
+    width: 100%;
+    padding: 3vw 5vw;
+    background-color: #000;
+}
+.revolution-impact .revolution-conatiner .heading {
+    position: relative;
+}
+.revolution-impact .revolution-conatiner .heading h3 {
+    font-size: calc(clamp(2.5rem, 2.237vw + 1.065rem, 3.75rem));
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4vw;
+    padding: 0 16vw;
+    line-height: 4vw;
+}
+.revolution-impact .revolution-conatiner .heading h3 span {
+    position: relative;
+    display: inline-block;
+}
+.revolution-impact .revolution-conatiner .heading h3 span img {
+    position: absolute;
+    bottom: -34%;
+    right: 1%;
+    display: block;
+}
+
+
+.revolution-impact .revolution-conatiner .text-counter  {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4vw;
+}
+
+.revolution-impact .revolution-conatiner .text-counter .revolution-counter {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.revolution-impact .revolution-conatiner .text-counter .revolution-counter p{
+    font-size: calc(clamp(0.688rem, 1.23vw - 0.102rem, 1.375rem));
+    text-align: center;
+    padding: 0 2vw;
+    color: #fff;
+}
+.revolution-impact .revolution-conatiner .text-counter .revolution-counter span {
+    font-size: calc(clamp(1.875rem, 3.356vw - 0.277rem, 3.75rem));
+    font-weight: 700;
+    background-image:linear-gradient(93deg, rgba(0,125,216,1) 0%, rgba(0,209,255,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------Media Query ---------------------------------------------------------------------- */
+@media (max-width: 1400px){}
+@media (max-width: 1280px){}
+@media (max-width: 1199px){
+    .Saas_banner_head {
+        font-size: calc(clamp(1.563rem, 2.131vw + 1.136rem, 2.5rem));
+        font-weight: 500;
+        color: #fff;
+        width: 66%;
+    }
+    .saasPageCss {
+        position: relative;
+        margin-bottom: 41px;
+    }
+    .product-slider .heading h3 {
+        font-size: calc(clamp(1.75rem, 3.125vw + 1.125rem, 3.125rem));
+    }
+    .section-container{
+        padding: calc(clamp(1.875rem, 7.102vw + 0.455rem, 5rem)) calc(clamp(0.625rem, 7.102vw - 0.795rem, 3.75rem));
+    }
+    .product-slider .heading h4 {
+        font-size: calc(clamp(1.125rem, 1.705vw + 0.784rem, 1.875rem));
+        padding: 0 calc(clamp(0.5rem, 12.349vw - 2.279rem, 5.625rem));
+    }
+    .saas-transformation .transformation-container .heading h2 {
+        margin-bottom: 70px;
+        font-size: calc(clamp(1.75rem, 1.807vw + 1.343rem, 2.5rem));
+        line-height: calc(clamp(2.25rem, 3.614vw + 1.437rem, 3.75rem));
+        padding: 0;
+    }
+    .revolution-impact .revolution-conatiner .heading h3 {
+        font-size: calc(clamp(1.25rem, 2.252vw + 0.743rem, 2.188rem));
+    }
+
+}
+@media (max-width: 991px){
+
+
+}
+@media (max-width: 767px){
+    .product-slider .heading { margin-bottom: 30px; }
+    .product-slider .heading h3 { margin-bottom: 25px; }
+    .product-slider .heading h4 { font-weight: 300; }
+    .Saas_banner_head { width: 100%; padding-left: 15px; }
+    .underline_overflow svg { width: 82px; }
+    .underline_overflow { left: 9%; bottom: -22%; }
+    .indian_saas .saas_second_container .heading_link p { margin-bottom: 30px; }
+    .indian_saas .saas_second_container{ flex-direction: column; gap: 50px; }
+    .indian_saas .booming_market .outline_box1 .booming_box { padding: 15px; } 
+    .indian_saas .booming_market .outline_box2 .buisness_box { padding: 15px; }
+    .product-slider .heading img { position: absolute; bottom: 51%; width: 25%; right: 30%; }
+    .product-slider .product-container .prod-slides .slide-container {display: flex; width: 100%; gap: 30px; justify-content: space-between; align-items: center; flex-wrap: wrap;}
+        .product-slider {padding: 8vw 5vw;}
+        .product-slider .product-container .prod-slides .slide-container .famrut-description h3{
+            text-align: center;
+        }
+        .product-slider .product-container .prod-slides .slide-container .famrut-description h5,  .product-slider .product-container .prod-slides .slide-container .LCM-description h5,.product-slider .product-container .prod-slides .slide-container .IPAS-description h5 {
+            text-align: center;
+            margin: 25px 0;
+            padding: 0;
+        }
+        .product-slider .product-container .prod-slides .slide-container .famrut-description p, .product-slider .product-container .prod-slides .slide-container .LCM-description p, .product-slider .product-container .prod-slides .slide-container .IPAS-description p{
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 0;
+            width: 100%;
+        }
+        .product-slider .product-container .prod-slides .slide-container .famrut-description .CTA-btn, .product-slider .product-container .prod-slides .slide-container .LCM-description .CTA-btn, .product-slider .product-container .prod-slides .slide-container .IPAS-description .CTA-btn {
+            text-align: center;
+        }
+        .saas-transformation .transformation-container .heading h3 {margin-bottom: 8vw;}
+        .saas-transformation .transformation-container .transformations-split .transf-text {padding-top: 8vw;}
+        .Infra-product { padding: 8vw 5vw; }
+        .product-slider .product-container .prod-slides .slide-container .IPAS-description{
+            width: 100%;
+        }
+        .product-slider .product-container .prod-slides .slide-container .LCM-description h3, .product-slider .product-container .prod-slides .slide-container .IPAS-description h3 { margin: 0; padding: 0;text-align: center; }
+        .product-slider .product-container .prod-slides .slide-container .LCM-img, .product-slider .product-container .prod-slides .slide-container .IPAS-img { width: 100%; }
+        .product-slider .product-container .prod-slides .slide-container .LCM-description {width: 100%;padding: 0; margin: 0;}
+      
+        .revolution-impact .revolution-conatiner .text-counter .revolution-counter {
+            width: 100%;
+        }
+        .saas-transformation .transformation-container .transformations-split .transf-text div {
+            padding-bottom: 30px;
+        }
+        .Infra-product .infra-container .card-container {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.Infra-product .infra-container .card-container .card {position: relative; background: none; width: 100%; margin: 15px 0; border-width: 1px; border-style: solid; border-image: linear-gradient(to bottom, #00abe1, #000) 1; border-radius: 50px;}
+.Infra-product .infra-container .card-container .card:first-child img {display: none;}
+.Infra-product .infra-container .card-container .card:last-child img{display: none;}
+.Infra-product .infra-container .card-container .card:nth-child(2)::before{ display: none;}
+.Infra-product .infra-container .center-img div {width: 50%;}
+
+.saas-transformation .transformation-container .heading h3{ line-height: 38px; padding: 0;}
+.saas-transformation .transformation-container .transformations-split {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 25px;}
+.saas-transformation .transformation-container .transformations-split .transf-text div p { line-height: inherit; font-size: 14px;}
+.revolution-impact .revolution-conatiner .heading h3 {padding: 0 0vw; line-height: 35px;margin-bottom: 10vw;}
+.revolution-impact .revolution-conatiner .heading img { display: none;}
+.revolution-impact .revolution-conatiner .text-counter p {text-align: center; font-size: 14px !important;}
+.Saas-banner .Saas-banner-head .saas-div{width: 100%; font-size: 27px; margin-left: 15px;}
+.Saas-banner .saas-cta {padding-top: 2vw; padding-bottom: 5vw;}
+.Saas-banner .saas-cta .CTA-button .hover-text, .india-cta .CTA-button .hover-text {border-right: 4px solid #00d9ff;}
+.indian-saas {padding: 7vw 5vw;}
+.saasPageCss h3#heading {margin-top: 19%;}
+.Saas-banner .saas-container {position: relative; padding: 10vw 5vw;}
+.Infra-product .infra-container .card-container .card p { font-size: 14px; }
+.Infra-product .infra-container .card-container .card h5 { font-size: 18px; }
+.Infra-product .infra-container .card-container .card h4 { margin-bottom: 0; }
+
+}
+@media (max-width: 667px){}
+@media (max-width: 480px){}
+@media (max-width: 360px){}
+

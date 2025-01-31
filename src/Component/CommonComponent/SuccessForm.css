@@ -1,0 +1,179 @@
+.modal_overlay .card {
+    z-index: 1000;
+    width: 30vw;
+    padding: 1vw 2vw;
+    border-radius: 36px;
+    background-color: #020326;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    border: 1px solid transparent;
+    border-image-slice: 1;
+    box-shadow: rgba(2, 5, 153, 0.5) 0px 50px 100px -20px inset, rgba(3, 6, 196, 0.3) 0px 30px 60px -30px, rgba(19, 3, 160, 0.35) 0px -2px 6px 0px inset;
+  }
+  
+  .modal_overlay .card h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: calc(clamp(0.938rem, 1.678vw - 0.138rem, 1.875rem)); font-weight: 600; line-height: 48px;
+  } 
+  
+  .modal_overlay .input_group {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff12;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .headerText {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.last_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  justify-content: space-between;
+}
+.modal_overlay .close_btn {
+  font-size: calc(clamp(0.938rem, 1.119vw + 0.22rem, 1.563rem));;
+  cursor: pointer;
+}
+span.close {
+  font-size: calc(clamp(0.625rem, 1.678vw - 0.451rem, 1.563rem));
+  cursor: pointer;
+  border: solid 1px #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background: #FFF;
+  color: #000;
+  position: absolute;
+  right: -60px;
+  bottom: 0;
+}
+.modal_overlay .input_group input {
+    flex: 1;
+    border: none;
+    background: none;
+    color: white;
+    padding-left: 0.5vw;
+  }
+  
+  .modal_overlay .input_group .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .modal_overlay .input_group input:focus {
+    outline: none;
+  }
+  
+  .recaptcha {
+    align-self: flex-start; 
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8vw;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .modal_overlay .submit_btn {
+    padding: 1vw;
+    border: none;
+    font-size: calc(clamp(0.938rem, 1.119vw + 0.22rem, 1.563rem));
+    border-radius: 8px;
+    color: white;
+  }
+  .modal_overlay .divider {
+    width: 52%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #0094FF, #000000, transparent);
+    margin-left: 16%;
+    margin-top: -4%;
+  }
+  
+  /* Add specific icon styles here */
+  /* .modal_overlay .user_icon {
+    background: url('path/to/user-icon.svg') no-repeat center center;
+    background-size: contain;
+  } */
+  
+  /* .modal_overlay .email_icon {
+    background: url('path/to/email-icon.svg') no-repeat center center;
+    background-size: contain;
+  }
+  
+  .modal_overlay .phone_icon {
+    background: url('path/to/phone-icon.svg') no-repeat center center;
+    background-size: contain;
+  } */
+  .error {
+    color: red;
+    font-size: 0.975rem; /* Smaller text for error messages */
+    margin-top: 0.25rem; /* Space between input field and error message */
+  }
+  
+  .modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Background with 0.5 opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is on top */
+  }
+  .recaptcha_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .recaptcha_container .g_recaptcha {
+    transform: scale(0.5); /* Scale down to 50% */
+    transform-origin: 0 0; /* Scale from the top-left corner */
+    width: 50px; /* Set desired width */
+   
+  }
+  
+  .recaptcha_container .g_recaptcha iframe {
+    width: 100% !important; /* Ensure iframe fits container */
+    height: auto !important; /* Ensure iframe fits container */
+  }
+
+
+  @media (max-width: 1400px){}
+@media (max-width: 1280px){}
+@media (max-width: 1199px){
+  .modal-overlay .card {
+    width: 40vw;
+  }
+}
+@media (max-width: 991px){
+  .modal-overlay .card {
+    width: 57vw;
+  }
+}
+@media (max-width: 767px){}
+@media (max-width: 667px){
+  .modal-overlay .card {
+    width: 90vw;
+    padding: 4vw 5vw;
+  }
+  
+}
+@media (max-width: 480px){}
+@media (max-width: 360px){}

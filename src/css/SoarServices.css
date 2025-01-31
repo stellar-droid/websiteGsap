@@ -1,0 +1,114 @@
+/* .soarcontainer {
+    background-image: url('../assets/images/SoarServices/BgSoar.png');
+    background-size: cover;
+    background-position: center;
+} */
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+:root {
+  --heading-font-size: calc(clamp(1.875rem, 3.356vw - 0.277rem, 3.75rem));
+}
+
+.cyberSecuritySection2 {
+  position: relative;
+  width: 100%;
+}
+.cyberSecuritySection2 .cyberSecurityContainer {
+  display: flex;
+  align-items: center;
+  padding: 3vw 5vw;
+  justify-content: space-between;
+}
+
+.cyberSecuritySection2 .cyberSecurityContainer .cyberSecurityText {
+  width: 50%;
+}
+
+.cyberSecuritySection2 .cyberSecurityContainer .cyberSecurityText .cs-heading {
+  font-size: var(--heading-font-size);
+  font-weight: 500;
+  margin-bottom: 3vw;
+}
+
+.cyberSecuritySection2
+  .cyberSecurityContainer
+  .cyberSecurityText
+  .cs-heading-p {
+  position: relative;
+  font-size: calc(clamp(1.125rem, 1.342vw + 0.264rem, 1.875rem));
+  padding: 0.5vw 0 0.5vw 2vw;
+}
+/* .cyberSecuritySection2 .cyberSecurityContainer .cyberSecurityText .cs-heading-p::before{
+    content: "";
+    position: absolute;
+    width: 0.5vw;
+    top: 45%;
+    left: 0;
+    height: 0.5vw;
+    border-radius: 50%;
+    background-color: #fff;
+} */
+.cyberSecuritySection2 .cyberSecurityContainer .cyberSecurityImg {
+  position: relative;
+  width: 36%;
+  padding-right: 7vw;
+}
+/* .cyberSecuritySection2 .cyberSecurityContainer  .cyberSecurityImg::after{
+    content: "";
+    width: 37vw;
+    height: 10vw;
+    position: absolute;
+    top: 49%;
+    left: 2%;
+    transform: rotate(-35deg);
+    filter: blur(50px);
+    z-index: -1;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(109, 220, 255, 1) 15%, rgba(0, 148, 255, 1) 64%);
+} */
+
+.cs-heading {
+  position: relative;
+  left: 22px;
+  top: 33px;
+}
+
+.cyberSecurityImg img {
+  max-width: 150%;
+  right: 100px;
+  position: relative;
+}
+.securityGradientCard{
+
+}
+
+.securityCard{
+
+}
+
+.securityGradientCard .securityCard {
+  width: 20%;
+  text-align: center;
+}
+
+.securityCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #0183cd;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.securityCardText{
+    
+}
