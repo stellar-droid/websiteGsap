@@ -83,16 +83,15 @@ body,
   right: 100px;
   position: relative;
 }
-.securityGradientCard{
-
+.securityGradientCard {
 }
 
-.securityCard{
-
+.securityCard {
 }
 
 .securityGradientCard .securityCard {
   width: 20%;
+  position: relative;
   text-align: center;
 }
 
@@ -100,15 +99,177 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: 2px solid #0183cd;
-  text-align: center;
+  border: 5px solid #0183cd;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  position: relative;
+  overflow: hidden; 
   font-size: 14px;
   padding: 10px;
+  
+}
+.waveEffect {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 56%, rgba(0,163,255,1) 89%);
+  background-size: 200% 200%;
+  }
+
+  /* .securityCircleArrow {
+    position: relative;
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: #0183cd;
+    margin: 0 auto;
+    margin-top: -2px;
+    margin-left: 44%;
+    background-image:url('../assets/images/SoarServices/arrow.png');
+    
+  } */
+  
+ 
+  /* .securityCircleArrow::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #0183cd;
+  } */
+  
+  /* Add glow effect */
+  /* .securityCircleArrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 100%;
+    background: #0183cd;
+    filter: blur(4px);
+    opacity: 0.5;
+  } */
+
+  .securityCircleArrow {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: -2px;
+    background-image: url('../assets/images/SoarServices/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    right: 10px;
+  }
+  
+  /* Remove just the CSS arrow tip */
+  .securityCircleArrow::after {
+    display: none;
+  }
+  
+  /* Keep the glow effect */
+  .securityCircleArrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100%;
+    background: #0183cd;
+    filter: blur(12px);
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+.securityCardText {
+  margin-top: 20px;
 }
 
-.securityCardText{
-    
+.itSecuritySection{
+display: flex;
+flex-direction: row;
+/* width: 100%; */
+position: relative;
+padding-top: 160px;
+}
+
+.itSecurityContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* width: 100%; */
+  padding-bottom: 73px;
+}
+
+.itSecurityImageText{
+  position: relative;
+  width: 50%;
+  margin-left: 108px;
+
+}
+
+/* .itSecurityText {
+  position: relative;
+  left: 100px;
+  top: 50px;
+}*/
+.itSecurityImage{
+  position: relative;
+    max-width: 150%;
+    top: -30px;
+}
+
+.itSecurityImage img{
+ max-width: 100%;
+} 
+
+.itSecurityDescription {
+  position: relative;
+  width: 50%;
+  margin-right: 50px;
+  /* margin-top: -85px; */
+  bottom: 50px;
+}
+
+.itSecurityDescription > span {
+  position: relative;
+  top: 59px;
+}
+
+.itSecurityDescription > ul >li {
+position: relative;
+padding-left: 25px;
+margin-bottom: 10px;
+font-size: 16px;
+
+}
+
+.itSecurityDescription > ul >li::before{
+  content: "\21E2";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #0183cd;
 }

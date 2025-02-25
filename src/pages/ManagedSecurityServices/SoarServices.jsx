@@ -1,10 +1,66 @@
 import React from "react";
+import gsap from "gsap";
 import "../../css/SoarServices.css";
 import Header from "../../Component/CommonComponent/Header";
 import BgSoar from "../../assets/images/SoarServices/BgSoar.png";
 import SoarImg1 from "../../assets/images/SoarServices/SoarImg1.png";
+import ItSecurityImg from "../../assets/images/SoarServices/ItSecurityImg.png";
 import CTAButton from "../../Component/CommonComponent/CTAButton";
 const SoarServices = () => {
+
+  const liRefs = React.useRef([]);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      liRefs.current.forEach((li) => {
+        if (li) {
+          const rect = li.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.8) {
+            gsap.to(li, {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+            });
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Trigger on mount to check already visible elements
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+  React.useLayoutEffect(() => {
+    
+
+    let tl1 = gsap.timeline();
+
+    tl1.fromTo(
+      ".waveEffect",
+      { opacity: 0 },
+      {
+        scale: 2.5,
+        opacity: 0.5,
+        duration: 1.5,
+        stagger: { each: 0.5, repeat: 1, yoyo: true }, // Creates the ripple effect
+        ease: "power2.out",
+      }
+    );
+
+    // Nest the timeline inside a master timeline
+    let masterTl = gsap
+      .timeline({
+        repeat: -1,
+        repeatDelay: 1, // Delay between cycles
+      })
+      .add(tl1);
+  }, []);
+
   return (
     <>
       <div className=" bg-white bg-no-repeat bg-cover bg-center relative">
@@ -90,59 +146,106 @@ const SoarServices = () => {
           className="cyberSecurityApproach text-white"
         >
           <div className="cyberSecurityContainer">
-            <div className="cyberSecurityText text-center ">
+            <div className="cyberSecurityText text-center mb-5 ">
               <h3 className="text-4xl mb-5">
                 How Can <span className=" font-bold">ESDS SOAR</span> Transform
                 <br className="hidden lg:block" />
                 Your Cybersecurity Approach?
               </h3>
-              <p className="text-lg">
+              <p className="text-lg mt-16">
                 ESDS SOAR solution combines adavanced threat intelligence,
                 <br className="hidden lg:block" />
-                AI-driven  automation, and real-time collaboration to :
+                AI-driven automation, and real-time collaboration to :
               </p>
             </div>
             <div className="securityGradientCard flex m-auto w-10/12 content-between">
               <div className="securityCard">
-                <div className="securityCircle">
+                <div className="securityCircle ">
+                  <div className="waveEffect"></div>
                   <h3>Identify Threats</h3>
                 </div>
+                <span className="securityCircleArrow"></span>
                 <div className="securityCardText">
                   <p>early with predictive analysis</p>
                 </div>
               </div>
               <div className="securityCard">
                 <div className="securityCircle">
+                  <div className="waveEffect"></div>
                   <h3>Automate responses</h3>
                 </div>
+                <span className="securityCircleArrow"></span>
                 <div className="securityCardText">
                   <p>to minimize human errors and delays</p>
                 </div>
               </div>
               <div className="securityCard">
                 <div className="securityCircle">
+                  <div className="waveEffect"></div>
                   <h3>Integrate seamlessly</h3>
                 </div>
+                <span className="securityCircleArrow"></span>
                 <div className="securityCardText">
                   <p>across your security tools for unified protection</p>
                 </div>
               </div>
               <div className="securityCard">
                 <div className="securityCircle">
+                  <div className="waveEffect"></div>
                   <h3>Prioritize potential threats</h3>
                 </div>
+                <span className="securityCircleArrow"></span>
                 <div className="securityCardText">
                   <p>for more efficient handling</p>
                 </div>
               </div>
               <div className="securityCard">
                 <div className="securityCircle">
+                  <div className="waveEffect"></div>
                   <h3>Respond to threats</h3>
                 </div>
+                <span className="securityCircleArrow"></span>
                 <div className="securityCardText">
                   <p>with precision and speed, ensuring minimal disruption</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="itSecuritySection" style={{ background: "#000819" }}>
+          <div className="itSecurityContainer">
+            <div className="itSecurityImageText">
+                  <div className="itSecurityText">
+                    <h3 className="text-white text-4xl">Why Trust ESDS for your IT security</h3>
+                    <p className="text-customBlue">We are revolutionizing the IT Cybersecurity landscape by delivering:</p>
+                  </div>
+                  <div className="itSecurityImage">
+                    <img src={ItSecurityImg} alt="IT Cyber Security" />
+                  </div>
+            </div>
+            <div className="itSecurityDescription text-white">
+              <ul>
+              {[
+                  "ESDS is Amongst India's top 3 commercial Tier III Compliant DCs...",
+                  "ESDS powers the world’s No.1 website by unique daily visitors...",
+                  "Extensive experience managing IT Security for 500+ clients...",
+                  "227,273+ Security scans performed to ensure optimal security posture...",
+                  "1,000,000+ Websites scanned to identify vulnerabilities and threats...",
+                  "Offers actionable intelligence, hybrid remediation services...",
+                  "122,000+ Monthly alerts triggered, ensuring timely threat detection...",
+                  "ESDS plays a pivotal role in consulting, monitoring, detecting, and protecting critical IT assets..."
+                ].map((text, index) => (
+                  <li
+                    key={index}
+                    ref={(el) => (liRefs.current[index] = el)}
+                    className="opacity-0 translate-y-10 transition-all duration-1000"
+                  >
+                    {text}
+                  </li>
+                ))}
+              </ul>
+              <span><CTAButton buttonText={"Get Started"} hoverText={"Get Started"}/></span>
             </div>
           </div>
         </section>
