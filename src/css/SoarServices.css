@@ -273,3 +273,61 @@ font-size: 16px;
   font-size: 18px;
   color: #0183cd;
 }
+
+.doUKnowImg {
+  max-width: 150%;
+  /* margin-left: 20%; */
+  padding-bottom: 50px;
+}
+
+.doUKnowImg > img {
+  margin-left: 170px;
+  width: 70%;
+  /* margin-bottom: -32%; */
+  position: relative;
+  /* top: 50px; */
+  /* padding-bottom: 50px; */
+}
+
+.dukInfoCircle {
+  height: 200px;
+  width: 200px;
+}
+
+section.doUKnowSection {
+  padding-bottom: 50px;
+}
+
+
+.dukInfoCircle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #0183cd;
+  border-top: none;
+  border-right: none;
+  /* border-left: none; */
+  border-bottom:none ;
+  position: relative;
+  overflow: hidden; 
+  font-size: 14px;
+  padding: 10px;
+}
+
+
+.dukInfo.flex.flex-row {
+  padding-left: 150px;
+  padding-right: 200px;
+}
+
+.dukInfoCardContainer.w-6\/12.flex {
+  column-gap: 30px;
+  margin-left: -60px;
+}
+
+.dukInfoCircleText.text-white {
+  margin-top: 20px;
+}

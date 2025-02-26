@@ -1,43 +1,39 @@
 import React from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../../css/SoarServices.css";
 import Header from "../../Component/CommonComponent/Header";
 import BgSoar from "../../assets/images/SoarServices/BgSoar.png";
 import SoarImg1 from "../../assets/images/SoarServices/SoarImg1.png";
 import ItSecurityImg from "../../assets/images/SoarServices/ItSecurityImg.png";
 import CTAButton from "../../Component/CommonComponent/CTAButton";
-const SoarServices = () => {
+import DYK from "../../assets/images/SoarServices/DYK.png";
+gsap.registerPlugin(ScrollTrigger);
 
+const SoarServices = () => {
   const liRefs = React.useRef([]);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      liRefs.current.forEach((li) => {
-        if (li) {
-          const rect = li.getBoundingClientRect();
-          if (rect.top < window.innerHeight * 0.8) {
-            gsap.to(li, {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "power3.out",
-            });
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger on mount to check already visible elements
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  
   React.useLayoutEffect(() => {
-    
+    gsap.fromTo(
+      liRefs.current,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.2, // Creates a delay between animations
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".itSecurityDescription ul",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "restart none none none",
+        },
+      }
+    );
+  }, []);
 
+  React.useLayoutEffect(() => {
     let tl1 = gsap.timeline();
 
     tl1.fromTo(
@@ -95,7 +91,7 @@ const SoarServices = () => {
 
         <section
           className="cyberSecuritySection2 flex flex-row "
-          style={{ background: "#000819" }}
+          style={{ background: "#00000b" }}
         >
           <div className="cyberSecurityContainer">
             <div className="cyberSecurityText text-white w-6/12 space-y-1">
@@ -142,7 +138,7 @@ const SoarServices = () => {
         </section>
 
         <section
-          style={{ background: "#000819" }}
+          style={{ background: "#00000b" }}
           className="cyberSecurityApproach text-white"
         >
           <div className="cyberSecurityContainer">
@@ -213,20 +209,28 @@ const SoarServices = () => {
           </div>
         </section>
 
-        <section className="itSecuritySection" style={{ background: "#000819" }}>
+        <section
+          className="itSecuritySection"
+          style={{ background: "#00000b" }}
+        >
           <div className="itSecurityContainer">
             <div className="itSecurityImageText">
-                  <div className="itSecurityText">
-                    <h3 className="text-white text-4xl">Why Trust ESDS for your IT security</h3>
-                    <p className="text-customBlue">We are revolutionizing the IT Cybersecurity landscape by delivering:</p>
-                  </div>
-                  <div className="itSecurityImage">
-                    <img src={ItSecurityImg} alt="IT Cyber Security" />
-                  </div>
+              <div className="itSecurityText">
+                <h3 className="text-white text-4xl">
+                  Why Trust ESDS for your IT security
+                </h3>
+                <p className="text-customBlue">
+                  We are revolutionizing the IT Cybersecurity landscape by
+                  delivering:
+                </p>
+              </div>
+              <div className="itSecurityImage">
+                <img src={ItSecurityImg} alt="IT Cyber Security" />
+              </div>
             </div>
             <div className="itSecurityDescription text-white">
               <ul>
-              {[
+                {[
                   "ESDS is Amongst India's top 3 commercial Tier III Compliant DCs...",
                   "ESDS powers the world’s No.1 website by unique daily visitors...",
                   "Extensive experience managing IT Security for 500+ clients...",
@@ -234,18 +238,86 @@ const SoarServices = () => {
                   "1,000,000+ Websites scanned to identify vulnerabilities and threats...",
                   "Offers actionable intelligence, hybrid remediation services...",
                   "122,000+ Monthly alerts triggered, ensuring timely threat detection...",
-                  "ESDS plays a pivotal role in consulting, monitoring, detecting, and protecting critical IT assets..."
+                  "ESDS plays a pivotal role in consulting, monitoring, detecting, and protecting critical IT assets...",
                 ].map((text, index) => (
-                  <li
-                    key={index}
-                    ref={(el) => (liRefs.current[index] = el)}
-                    className="opacity-0 translate-y-10 transition-all duration-1000"
-                  >
+                  <li key={index} ref={(el) => (liRefs.current[index] = el)}>
                     {text}
                   </li>
                 ))}
               </ul>
-              <span><CTAButton buttonText={"Get Started"} hoverText={"Get Started"}/></span>
+              <span>
+                <CTAButton
+                  buttonText={"Get Started"}
+                  hoverText={"Get Started"}
+                />
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section className="doUKnowSection" style={{ background: "#00000b" }}>
+          <div className="doUKnowImg">
+            <img src={DYK} alt="Did you know" />
+            <div className="dukAchivements mb-7 mt-5 text-white whitespace-pre-line m-auto w-8/12 text-center text-lg ">
+              ESDS secures the 450+ banks of India and monitors critical IT
+              assets for over 500 + clients,
+              <br className="hidden lg:block" />
+              including managing government entities and 50 of India’s Fortune
+              500 companies.
+            </div>
+          </div>
+
+          <div className="dukInfo flex flex-row ">
+            <div className="dukInfoText  w-6/12">
+              <span className="text-white text-2xl">
+                A Trusted Choice <br className="hidden lg:block" />
+                for Leading Organizations
+              </span>
+              <br className="hidden lg:block" />
+              <span className="text-[#00a3ff] font-bold  m-auto  text-center text-lg">
+                Our IT Security solutions are trusted{" "}
+                <br className="hidden lg:block" />
+                by top banks, government agencies,
+                <br className="hidden lg:block" /> and enterprises across India.
+              </span>
+            </div>
+            <div className="dukInfoCardContainer w-6/12 flex">
+              <div className="dukInfoCard w-6/12">
+                <div className="dukInfoCircle">
+                  <div className="text-white  "></div>
+                  <h3 className="text-white">Easy Pay</h3>
+                </div>
+                <div className="dukInfoCircleText text-white">
+                  <p>
+                    EasyPay leverages IT security services to secure
+                    unpredictable digital transactions.
+                  </p>
+                </div>
+              </div>
+              <div className="dukInfoCard w-6/12">
+                <div className="dukInfoCircle">
+                  <div className="text-white  "></div>
+                  <h3 className="text-white">Easy Pay</h3>
+                </div>
+                <div className="dukInfoCircleText text-white">
+                  <p>
+                    EasyPay leverages IT security services to secure
+                    unpredictable digital transactions.
+                  </p>
+                </div>
+              </div>
+              <div className="dukInfoCard w-6/12">
+                <div className="dukInfoCircle">
+                  <div className="text-white  "></div>
+                  <h3 className="text-white">Easy Pay</h3>
+                </div>
+                <div className="dukInfoCircleText text-white">
+                  <p>
+                    EasyPay leverages IT security services to secure
+                    unpredictable digital transactions.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
