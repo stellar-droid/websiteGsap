@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../../css/SoarServices.css";
@@ -7,7 +8,17 @@ import BgSoar from "../../assets/images/SoarServices/BgSoar.png";
 import SoarImg1 from "../../assets/images/SoarServices/SoarImg1.png";
 import ItSecurityImg from "../../assets/images/SoarServices/ItSecurityImg.png";
 import CTAButton from "../../Component/CommonComponent/CTAButton";
+import { ArrowUpRight } from "lucide-react";
 import DYK from "../../assets/images/SoarServices/DYK.png";
+import easyPay from "../../assets/images/SoarServices/easyPay.png";
+import eMudra from "../../assets/images/SoarServices/eMudra.png";
+import sidbi from "../../assets/images/SoarServices/sidbi.png";
+import siem from "../../assets/images/SoarServices/siem.svg";
+import threatDetection from "../../assets/images/SoarServices/threatDetection.svg";
+import msirm from "../../assets/images/SoarServices/msirm.svg";
+import securityOperation from "../../assets/images/SoarServices/securityOperation.svg";
+import managedSecurity from "../../assets/images/SoarServices/managedSecurity.svg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const SoarServices = () => {
@@ -284,8 +295,9 @@ const SoarServices = () => {
             <div className="dukInfoCardContainer w-6/12 flex">
               <div className="dukInfoCard w-6/12">
                 <div className="dukInfoCircle">
-                  <div className="text-white  "></div>
-                  <h3 className="text-white">Easy Pay</h3>
+                  <span className="text-white logoSpan">
+                    <img src={easyPay} alt="easyPay" />
+                  </span>
                 </div>
                 <div className="dukInfoCircleText text-white">
                   <p>
@@ -296,8 +308,9 @@ const SoarServices = () => {
               </div>
               <div className="dukInfoCard w-6/12">
                 <div className="dukInfoCircle">
-                  <div className="text-white  "></div>
-                  <h3 className="text-white">Easy Pay</h3>
+                  <span className="text-white logoSpan">
+                    <img src={eMudra} alt="eMudra" />
+                  </span>
                 </div>
                 <div className="dukInfoCircleText text-white">
                   <p>
@@ -308,8 +321,9 @@ const SoarServices = () => {
               </div>
               <div className="dukInfoCard w-6/12">
                 <div className="dukInfoCircle">
-                  <div className="text-white  "></div>
-                  <h3 className="text-white">Easy Pay</h3>
+                  <span className="text-white logoSpan">
+                    <img src={sidbi} alt="sidbi" />
+                  </span>
                 </div>
                 <div className="dukInfoCircleText text-white">
                   <p>
@@ -318,6 +332,153 @@ const SoarServices = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="managedSecurityOrchestration"
+          style={{ background: "#00000b" }}
+        >
+          <div className="managedSecurityOrchestrationHeadText text-center mb-5">
+            <h3 className="text-4xl text-white">
+              ESDS Comprehensive{" "}
+              <span className="font-bold">
+                Managed Security Orchestration{" "}
+                <br className="hidden lg:block" />
+                Automation and Response
+              </span>{" "}
+              (SOAR) Offerings -
+            </h3>
+          </div>
+          <div className="managedSecurityOrchestrationContainer ">
+            <div className="managedSecurityOrchestrationCard">
+              <span className="cardImg">
+                <img src={siem} alt="card" />
+              </span>
+              <div className="card">
+                <h4>SIEM Integration:</h4>
+                <p>
+                  SOAR integrates with your SIEM platform for continuous,
+                  real-time threat detection and incident management.
+                </p>
+              </div>
+            </div>
+            <div className="managedSecurityOrchestrationCard">
+              <span className="cardImg">
+                <img src={threatDetection} alt="card" />
+              </span>
+              <div className="card">
+                <h4>Advanced Threat Detection:</h4>
+                <p>
+                  SOAR integrates with intelligent threat-hunting tools to
+                  automatically detect and respond to complex threats.
+                </p>
+              </div>
+            </div>
+            <div className="managedSecurityOrchestrationCard">
+              <span className="cardImg">
+                <img src={msirm} alt="card" />
+              </span>
+              <div className="card">
+                <h4>Managed Security & Incident Response Management:</h4>
+                <p>
+                  SOAR integrates with your SIEM platform for continuous,
+                  real-time threat detection and incident management.
+                </p>
+              </div>
+            </div>
+            <div className="managedSecurityOrchestrationCard">
+              <span className="cardImg">
+                <img src={securityOperation} alt="card" />
+              </span>
+              <div className="card">
+                <h4>Security Operations Automation:</h4>
+                <p>
+                  Automate common security tasks like log collection, threat
+                  analysis, and breach audits with custom playbooks.
+                </p>
+              </div>
+            </div>
+            <div className="managedSecurityOrchestrationCard">
+              <span className="cardImg">
+                <img src={managedSecurity} alt="card" />
+              </span>
+              <div className="card">
+                <h4>Managed Security Orchestration:</h4>
+                <p>
+                  SOAR integrates diverse security tools and technologies into
+                  one unified platform for streamlined operations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="leadingOrganization"
+          style={{ background: "#00000b" }}
+        >
+          <div className="leadingOrganizationContainer text-white py-16 mx-auto px-4 max-w-6xl">
+            <div className="leadingOrganizationHeader">
+              <h2 className="text-4xl font-light text-center mb-8">
+                A Trusted <span className="font-bold">Choice for Leading</span>{" "}
+                Organizations
+              </h2>
+
+              <p className="text-center mb-14">
+                Our IT Security solutions are trusted by top banks, government
+                agencies, and enterprises across India.
+              </p>
+            </div>
+
+            <div className="leadingOrganizationInfo space-y-6 mb-16">
+              <div className="leadingOrganization1 flex items-center justify-between border-b border-gray-700 pb-5">
+                <div className="leadingOrganizationSection1 flex items-center gap-6">
+                  <img src={easyPay} alt="EasyPay Logo" className="h-10" />
+                  <p>
+                    <span className="text-cyan-400 font-medium">EasyPay</span>{" "}
+                    Leverages IT Security Services To Secure Unpredictable
+                    Digital Transactions.
+                  </p>
+                </div>
+                 <Link to="">
+                 <ArrowUpRight className=" leadingOrganizationSection1 text-white h-6 w-6" />
+                 </Link> 
+              </div>
+
+              <div className="leadingOrganization2 flex items-center justify-between border-b border-gray-700 pb-5">
+                <div className="leadingOrganizationSection1 flex items-center gap-6">
+                  <img src={eMudra} alt="MUDRA Logo" className="h-12" />
+                  <p>
+                    <span className="text-cyan-400 font-medium">MUDRA</span>{" "}
+                    Relies On ESDS For Exclusive Security Solutions.
+                  </p>
+                </div>
+                <ArrowUpRight className="leadingOrganizationSection2 text-white h-6 w-6" />
+              </div>
+
+              <div className="leadingOrganization3 flex items-center justify-between border-b border-gray-700 pb-5">
+                <div className="leadingOrganizationSection1 flex items-center gap-6">
+                  <img src={sidbi} alt="SIDBI Logo" className="h-10" />
+                  <p>
+                    <span className="text-cyan-400 font-medium">SIDBI</span>{" "}
+                    Partners With ESDS For Faster Threat Detection And Response.
+                  </p>
+                </div>
+                <ArrowUpRight className="leadingOrganizationSection2 text-white h-6 w-6" />
+              </div>
+            </div>
+
+            <div className="leadingOrganisationFooter text-center">
+              <h3 className="text-3xl font-light mb-4">
+                The Real-World Impact of{" "}
+                <span className="font-bold">
+                  ESDS Government
+                  <br />
+                  Community Cloud
+                </span>
+              </h3>
             </div>
           </div>
         </section>
