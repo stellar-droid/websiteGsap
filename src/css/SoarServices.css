@@ -346,16 +346,25 @@ section.doUKnowSection {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 150%;
+  width: 150px;
+  height: 150px;
   background: radial-gradient(circle, #00C2FF 0%, rgba(0, 194, 255, 0.5) 40%, rgba(0, 194, 255, 0) 70%);
   z-index: -1;
   opacity: 0.5;
 }
 
+
+.managedSecurityOrchestration {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 0;
+  background: #00000b;
+}
+
 .managedSecurityOrchestrationHeadText {
   position: relative;
-  padding-bottom: 50px; /* Add space for the line below the text */
+  padding-bottom: 50px;
+  z-index: 5;
 }
 
 .managedSecurityOrchestrationHeadText::after {
@@ -364,8 +373,8 @@ section.doUKnowSection {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%; /* Adjust the width of the line as needed */
-  height: 2px; /* Line thickness */
+  width: 80%;
+  height: 2px;
   background: linear-gradient(
     to right,
     transparent 0%,
@@ -375,46 +384,46 @@ section.doUKnowSection {
   );
 }
 
-.managedSecurityOrchestrationContainer{
+.managedSecurityOrchestrationContainer {
   display: flex;
-    margin-top: 8vw;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 120px;
-    padding-right: 120px;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 120px;
+  margin-top: 8vw;
+  perspective: 1000px; /* 3D perspective */
+  gap: 40px;
 }
 
-.managedSecurityOrchestrationCard{
-  translate: none;
-  rotate: none;
-  scale: none;
-  transform: scale(0.8, 0.8);
-  z-index: 1;
-  opacity: 1;
-  width:30%;
+.managedSecurityOrchestrationCard {
+  width: 30%;
+  margin-bottom: 50px;
   position: relative;
-
+  transition: transform 0.3s ease;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
-.cardImg{
+.cardImg {
   position: absolute;
-    top: 2%;
-    width: 38%;
-    left: 30%;
-    z-index: 2;
+  top: 2%;
+  width: 38%;
+  left: 31%;
+  z-index: 2;
+  transition: transform 0.3s ease;
 }
 
-.card{
+.card {
   height: 100%;
   padding: 5vw 2vw 2vw;
-  border-radius: 20px; /* Match the image's rounded corners */
-  background: linear-gradient(to bottom, #00315a, #001220); /* Dark blue gradient */
-  box-shadow: 
-    0 0 25px rgba(0, 132, 255, 0.3), /* Outer glow */
-    inset 0 -20px 30px -25px rgba(0, 132, 255, 0.5); /* Bottom inner glow */
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #00315a, #001220);
+  /* box-shadow: 
+    0 0 25px rgba(0, 132, 255, 0.3),
+    inset 0 -20px 30px -25px rgba(0, 132, 255, 0.5); */
   position: relative;
   overflow: hidden;
+  min-height: 280px;
+  transition:  transform 0.3s ease;
 }
 
 .card::before {
@@ -431,7 +440,7 @@ section.doUKnowSection {
   );
 }
 
-.card > h4{
+.card > h4 {
   font-size: clamp(1.125rem, 1.902vw - .094rem, 2.188rem);
   text-align: center;
   font-weight: 600;
@@ -439,10 +448,40 @@ section.doUKnowSection {
   color: #00C2FF;
 }
 
-.card > p{
+.card > p {
   font-size: clamp(.75rem, 1.454vw - .182rem, 1.563rem);
-    text-align: center;
-    font-weight: 200;
-    margin: 0;
-    color: #ffffff;
+  text-align: center;
+  font-weight: 200;
+  margin: 0;
+  color: #ffffff;
 }
+
+/* Hover effect */
+.managedSecurityOrchestrationCard:hover .card {
+  /* box-shadow: 
+    0 0 35px rgba(0, 194, 255, 0.5),
+    inset 0 -20px 30px -25px rgba(0, 194, 255, 0.7); */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1280px) {
+  .managedSecurityOrchestrationContainer {
+    padding: 0 80px;
+  }
+  
+  .managedSecurityOrchestrationCard {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .managedSecurityOrchestrationContainer {
+    padding: 0 40px;
+  }
+  
+  .managedSecurityOrchestrationCard {
+    width: 80%;
+  }
+}
+
+

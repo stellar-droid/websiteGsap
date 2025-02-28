@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef,useLayoutEffect} from "react";
 import {Link} from "react-router-dom"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -18,6 +18,7 @@ import threatDetection from "../../assets/images/SoarServices/threatDetection.sv
 import msirm from "../../assets/images/SoarServices/msirm.svg";
 import securityOperation from "../../assets/images/SoarServices/securityOperation.svg";
 import managedSecurity from "../../assets/images/SoarServices/managedSecurity.svg";
+import Footer from "../../Component/CommonComponent/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,6 +68,97 @@ const SoarServices = () => {
       })
       .add(tl1);
   }, []);
+
+  const sectionRef = useRef(null);
+  const containerRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  // Add cards to the ref array
+  const addToRefs = (el) => {
+    if (el && !cardsRef.current.includes(el) && el.classList.contains('managedSecurityOrchestrationCard')) {
+      cardsRef.current.push(el);
+    }
+  };
+
+  useLayoutEffect(() => {
+    // Store context to easily kill animations on unmount
+    let ctx = gsap.context(() => {
+      // Clear any existing ScrollTriggers
+      // ScrollTrigger.getAll().forEach(st => st.kill());
+      
+      // Reset card refs array for potential re-renders
+      cardsRef.current = cardsRef.current.slice(0, 5);
+      
+      // Initial setup - make sure cards are visible but styled
+      cardsRef.current.forEach((card, i) => {
+        gsap.set(card, {
+          transformOrigin: "top center",
+          scale: 0.8,
+          opacity: 0,
+          y: 50
+        });
+      });
+      
+      // Create a separate animation for each card that triggers when the card comes into view
+      cardsRef.current.forEach((card, i) => {
+        gsap.to(card, {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          rotationX: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%", // Starts animation when card is 80% from the top of the viewport
+            end: "bottom 20%",
+            toggleActions: "play none none reverse", // play on enter, reverse on leave
+            markers: false // Remove in production
+          }
+        });
+        
+        // Add perspective effect as you scroll
+        gsap.to(card, {
+          rotationX: i % 2 === 0 ? 10 : -10, // Alternate rotation directions
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1, // Smooth scrubbing effect
+          }
+        });
+      });
+      
+      // Add hover effects
+      cardsRef.current.forEach(card => {
+        card.addEventListener("mouseenter", function() {
+          gsap.to(this, {
+            scale: 1.05,
+            rotationX: 0, // Reset rotation on hover
+            // boxShadow: "0 0 35px rgba(0, 194, 255, 0.5)",
+            duration: 0.3,
+            ease: "power1.out",
+            zIndex: 10
+          });
+        });
+        
+        card.addEventListener("mouseleave", function() {
+          gsap.to(this, {
+            scale: 1,
+            // boxShadow: "0 0 25px rgba(0, 132, 255, 0.3)",
+            duration: 0.3,
+            ease: "power1.in",
+            zIndex: 1
+          });
+        });
+      });
+    }, sectionRef);
+    
+    // Cleanup function
+    return () => {
+      ctx.revert(); // This will clean up all GSAP animations created by this context
+    };
+  }, []); // Empty dependency array means it runs once after mount
 
   return (
     <>
@@ -339,6 +431,7 @@ const SoarServices = () => {
         <section
           className="managedSecurityOrchestration"
           style={{ background: "#00000b" }}
+          ref={sectionRef}
         >
           <div className="managedSecurityOrchestrationHeadText text-center mb-5">
             <h3 className="text-4xl text-white">
@@ -351,8 +444,8 @@ const SoarServices = () => {
               (SOAR) Offerings -
             </h3>
           </div>
-          <div className="managedSecurityOrchestrationContainer ">
-            <div className="managedSecurityOrchestrationCard">
+          <div ref={containerRef} className="managedSecurityOrchestrationContainer ">
+            <div ref={addToRefs} className="managedSecurityOrchestrationCard">
               <span className="cardImg">
                 <img src={siem} alt="card" />
               </span>
@@ -364,7 +457,7 @@ const SoarServices = () => {
                 </p>
               </div>
             </div>
-            <div className="managedSecurityOrchestrationCard">
+            <div ref={addToRefs} className="managedSecurityOrchestrationCard">
               <span className="cardImg">
                 <img src={threatDetection} alt="card" />
               </span>
@@ -376,7 +469,7 @@ const SoarServices = () => {
                 </p>
               </div>
             </div>
-            <div className="managedSecurityOrchestrationCard">
+            <div ref={addToRefs} className="managedSecurityOrchestrationCard">
               <span className="cardImg">
                 <img src={msirm} alt="card" />
               </span>
@@ -388,7 +481,7 @@ const SoarServices = () => {
                 </p>
               </div>
             </div>
-            <div className="managedSecurityOrchestrationCard">
+            <div ref={addToRefs} className="managedSecurityOrchestrationCard">
               <span className="cardImg">
                 <img src={securityOperation} alt="card" />
               </span>
@@ -400,7 +493,7 @@ const SoarServices = () => {
                 </p>
               </div>
             </div>
-            <div className="managedSecurityOrchestrationCard">
+            <div ref={addToRefs} className="managedSecurityOrchestrationCard">
               <span className="cardImg">
                 <img src={managedSecurity} alt="card" />
               </span>
@@ -482,6 +575,7 @@ const SoarServices = () => {
             </div>
           </div>
         </section>
+        <Footer BgColor={"#00000b"} />
       </div>
     </>
   );
